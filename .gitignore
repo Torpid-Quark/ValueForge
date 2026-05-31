@@ -1,0 +1,10 @@
+# Secure credentials
+.env
+.groq_api_key
+
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# Local Streamlit state
+.streamlit/
