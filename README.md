@@ -30,3 +30,34 @@ Traditional LLM wrappers suffer from non-determinism and mathematical hallucinat
 ```bash
 git clone [https://github.com/Torpid-Quark/ValueForge.git](https://github.com/Torpid-Quark/ValueForge.git)
 cd ValueForge
+```
+### 2. Install Dependencies
+Make sure you have Python installed, then install the required libraries:
+
+```bash
+pip install streamlit pandas groq
+```
+### 3. Set Up Environment Variables
+You will need a valid Groq API key to run the inference engine.
+
+Windows (PowerShell):
+```bash
+$env:GROQ_API_KEY="your_actual_api_key_here"
+```
+Mac/Linux:
+```bash
+export GROQ_API_KEY="your_actual_api_key_here"
+```
+
+### 4. Run the Engine
+
+```bash
+python -m streamlit run app.py
+```
+
+### 5. Usage Workflow
+Define the Market: Open the left sidebar and type in your Target Industry (e.g., "Skincare / Anti-Aging")
+
+Anchor the Context: Paste 5-10 lines of current competitor claims to ground the engine's local baseline
+
+Evaluate: Enter your proposed product concept in the main text area and execute the evaluation matrix to generate your mathematically verified Differentiation Score
