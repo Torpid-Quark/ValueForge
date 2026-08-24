@@ -1,49 +1,53 @@
-# ValueForge: AI Product Differentiation Engine
+# ValueForge: Product Differentiation Engine
 
-**ValueForge** is a production grade, product agnostic enterprise tool designed to mathematically calculate and evaluate consumer product differentiation against competitive market density before manufacturing. 
+**ValueForge** is a production-grade, product-agnostic engine designed to calculate and evaluate consumer product differentiation against competitive market density prior to manufacturing. 
 
-Built as an internal prototype for brand strategy and product management, this engine transforms qualitative market saturation into quantitative, actionable whitespace metrics.
+Built as an internal tool for brand strategy and product planning, this engine converts qualitative market positioning into quantitative whitespace metrics.
 
 ## Core Architecture & Data Science
 
-Traditional LLM wrappers suffer from non-determinism and mathematical hallucination. ValueForge solves this through a decoupled, deterministic architecture:
+Standard wrapper applications frequently suffer from non-deterministic outputs and calculation errors. ValueForge avoids this through a decoupled execution architecture:
 
-* **Dual-Layer Semantic Parsing:** Merges **Contextual Ingestion** (live, user-uploaded competitor baselines) with **Parametric Memory** (Llama 3.1's pre-trained knowledge of global market tropes) to identify genuine market whitespace.
-* **Explainable AI (SHAP-Inspired Attribution):** Moves beyond black-box scoring. Every concept is broken down into isolated feature vectors, penalizing saturated clichés (negative integers) and rewarding unique positioning (positive integers) against a strict baseline score of 50.
-* **Deterministic Math Guardrails:** LLM variance is clamped (`temperature=0.0`). A resilient native Python Regular Expression (Regex) pipeline extracts isolated feature impact scores and programmatically computes the final arithmetic, entirely eliminating AI arithmetic hallucinations.
+* **Dual-Layer Semantic Parsing:** Combines live, user-provided competitor baselines with dynamic parametric memory via the Groq API to evaluate market saturation patterns.
+* **Explainable Feature Attribution:** Every submitted product concept is broken down into feature vectors, penalizing overused tropes with negative values and scoring unique positioning features against a baseline value of 50.
+* **Deterministic Math Engine:** Model temperature is locked (`temperature=0.0`). A regex pipeline extracts numerical feature impact values and computes final arithmetic using native Python routines to eliminate calculation errors.
 
 ## Key Features
 
-* **Universal Scope Parsing:** Dynamically switches focus across distinct industries (from Sports Nutrition to SaaS to Reproductive Wellness) without requiring backend code changes.
-* **Interactive UI:** Built on Streamlit for real-time brand manager dashboarding.
-* **Homogeneity Warning System:** Automatically flags concepts that fall below acceptable differentiation thresholds to prevent brand dilution.
+* **Universal Scope Parsing:** Supports category switching (from sports nutrition to software services) without structural modifications to the underlying logic.
+* **Dynamic Model Handling:** Automatically queries and ingests active Groq models at runtime to prevent API deprecation failures.
+* **Interactive Interface:** Built with Streamlit for real-time comparative analysis and dashboarding.
+* **Homogeneity Threshold Warnings:** Flags concepts that fall below predefined positioning thresholds to mitigate brand overlap risks.
 
 ## Tech Stack
 
-* **Frontend UI:** Streamlit (Dynamic layout compilation)
-* **LLM Orchestration:** Llama 3.1 (8B Instant) via Groq API
-* **Statistical Logic & Regex:** Native Python (`re`, `pandas`)
+* **Frontend Interface:** Streamlit
+* **Model Orchestration:** Groq API (Llama 3.3 / Llama 3.1)
+* **Logic & Parsing:** Python (`re`, `pandas`)
 
-## 📦 Installation & Quick Start
+## Installation & Quick Start
 
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/Torpid-Quark/ValueForge.git](https://github.com/Torpid-Quark/ValueForge.git)
 cd ValueForge
 ```
+
 ### 2. Install Dependencies
-Make sure you have Python installed, then install the required libraries:
+Make sure Python is installed, then run:
 
 ```bash
 pip install streamlit pandas groq
 ```
+
 ### 3. Set Up Environment Variables
-You will need a valid Groq API key to run the inference engine.
+Set your Groq API key in your terminal session before launching the application:
 
 Windows (PowerShell):
-```bash
+```powershell
 $env:GROQ_API_KEY="your_actual_api_key_here"
 ```
+
 Mac/Linux:
 ```bash
 export GROQ_API_KEY="your_actual_api_key_here"
@@ -56,8 +60,8 @@ python -m streamlit run app.py
 ```
 
 ### 5. Usage Workflow
-Define the Market: Open the left sidebar and type in your Target Industry (e.g., "Skincare / Anti-Aging")
 
-Anchor the Context: Paste 5-10 lines of current competitor claims to ground the engine's local baseline
-
-Evaluate: Enter your proposed product concept in the main text area and execute the evaluation matrix to generate your mathematically verified Differentiation Score
+1. **Define the Market:** Open the sidebar and set your Target Industry (e.g., "Skincare / Anti-Aging").
+2. **Select Model:** Choose an active Groq model from the dropdown.
+3. **Anchor Context:** Input competitor product claims to set the local evaluation baseline.
+4. **Evaluate Concept:** Input your product concept in the main interface and run the evaluation matrix to calculate the differentiation score.
